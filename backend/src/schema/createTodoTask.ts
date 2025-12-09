@@ -1,6 +1,6 @@
 import { z } from "zod";
 
 export const createTaskBody = z.object({
-  title: z.string().min(1),
+  title: z.string().nonempty('Title can not be empty'),
   description: z.string().optional(),
 });
